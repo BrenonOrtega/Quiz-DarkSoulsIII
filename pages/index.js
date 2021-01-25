@@ -34,12 +34,16 @@ export default function Home() {
   return (
      <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+      <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>Welcome to Dark Souls!</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>lorem dolor ipsum sit amet....</p>
+            <p>Não existe jeito melhor de iniciar um quiz de Dark Souls do que com um</p>
+            <img src={db.died} alt="My logo" style ={{width: 200, height: 100}}/>
+
+            <Widget.Input placeholder="Do you have a name?" class="Widget__Input-i6tyvd-2 htMXfh"></Widget.Input>
           </Widget.Content>
         </Widget>
 

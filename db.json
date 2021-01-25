@@ -1,5 +1,6 @@
 {
   "bg": "https://www.teahub.io/photos/full/358-3589490_dark-souls-3-firelink-shrine-art..jpg",
+  "died":"https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg",
   "title": "Quiz CSS da Alura",
   "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
   "questions": [
@@ -32,7 +33,7 @@
 
   "theme": {
     "colors": {
-      "primary": "#43a047",
+      "primary": "#424242",
       "secondary": "#29b6f6",
       "mainBg": "#171B35",
       "contrastText": "#FFFFFF",

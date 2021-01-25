@@ -24,6 +24,8 @@ const Widget = styled.div`
     font-weight: 400;
     line-height: 1;
   }
+
+
 `;
 
 Widget.Content = styled.div`
@@ -51,5 +53,18 @@ Widget.Header = styled.header`
     margin: 0;
   }
 `;
+
+Widget.Input = styled.input`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: ${({ theme }) => theme.colors.primary};
+  
+  * {
+    margin: 1;
+  }
+`;
+
 
 export default Widget
