@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 const Widget = styled.div`
-  margin-top: 24px;
-  margin-bottom : 24px;
+  margin-top: 12px;
+  margin-bottom : 12px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   border-radius: 4px;
   overflow: hidden;
@@ -20,7 +20,7 @@ const Widget = styled.div`
   }
 
   p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1;
   }
@@ -29,7 +29,7 @@ const Widget = styled.div`
 `;
 
 Widget.Content = styled.div`
-  padding: 24px 32px 32px 32px;
+  padding: 16px 24px 16px 24px;
   &>*:first-child{
     margin-top: 0;
   }
@@ -46,21 +46,21 @@ Widget.Header = styled.header`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 18px 32px;
+  padding: 15px 26px;
   background-color: ${({ theme }) => theme.colors.primary};
-  
   * {
     margin: 0;
   }
 `;
 
 Widget.Input = styled.input`
+  border-radius: 4px;
+  font-size: 13px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px 20px;
-  background-color: ${({ theme }) => theme.colors.primary};
-  
+  padding: 5px 7px;  
+  background-color: ${({ theme }) => theme.colors.mainBg};  
   * {
     margin: 1;
   }

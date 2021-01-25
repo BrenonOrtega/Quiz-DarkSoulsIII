@@ -27,9 +27,8 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
 
   background-image{
-    flex:1
-    
-  }
+    flex:1  
+    }
   }
 `
 const theme = db.theme;

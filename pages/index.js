@@ -5,6 +5,7 @@ import Footer from "../src/components/Footer"
 import QuizLogo from "../src/components/QuizLogo"
 import GitHubCorner from "../src/components/GitHubCorner"
 import QuizBackground from "../src/components/QuizBackground"
+import Meta from "../src/components/MetaTag"
 
 const Title = styled.h1`
   font-size: 50px;
@@ -32,7 +33,9 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-     <QuizBackground backgroundImage={db.bg}>
+  
+     <QuizBackground backgroundImage={db.bg} >
+      <Meta/>      
       <QuizContainer>
       <QuizLogo />
         <Widget>
@@ -40,10 +43,10 @@ export default function Home() {
             <h1>Welcome to Dark Souls!</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Não existe jeito melhor de iniciar um quiz de Dark Souls do que com um</p>
-            <img src={db.died} alt="My logo" style ={{width: 200, height: 100}}/>
+            <p>Não existe jeito melhor de iniciar um quiz de Dark Souls do que com</p>
+            <img src={db.died} alt="Você morreu" style ={{width: 200, height: 100}}/>
 
-            <Widget.Input placeholder="Do you have a name?" class="Widget__Input-i6tyvd-2 htMXfh"></Widget.Input>
+            <Widget.Input placeholder="Do you have a name?" className="Widget__Input-i6tyvd-2 htMXfh"></Widget.Input>
           </Widget.Content>
         </Widget>
 
@@ -52,7 +55,7 @@ export default function Home() {
             <h>Quiz da Galera</h>
           </Widget.Content>
           <Widget.Content>
-            <p>Lorem ipsum dolor sit amet.... gera blabla bla</p>
+            <p>Aqui serão inseridos alguns trabalhos incríveis de outros participantes do projeto!</p>
           </Widget.Content>
         </Widget>
         <Footer/>
@@ -61,3 +64,6 @@ export default function Home() {
     </QuizBackground>
   );
 }
+
+
+
