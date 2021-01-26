@@ -10,8 +10,9 @@ import Meta from "../src/components/MetaTag"
 
 export default function QuizPage() {
   return (
-    <img src={db.died} alt="My logo" style ={{width: 200, height: 100}}/>,
-    <YouDied/>
-  );
+    <QuizBackground backgroundImage = {db.died}>
+    </QuizBackground>
+      
+  )
 }
 
