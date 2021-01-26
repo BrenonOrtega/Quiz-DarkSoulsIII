@@ -1,5 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import db from "../db.json";
+import db from '../db.json';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -14,7 +14,8 @@ const GlobalStyle = createGlobalStyle`
     /* New styles */
     display: flex;
     flex-direction: column;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
+
     // Deixa branco no começo
     color: ${({ theme }) => theme.colors.contrastText};
   }
@@ -32,8 +33,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 const theme = db.theme;
-
-
 export default function App({ Component, pageProps }) {
   return (
     <>

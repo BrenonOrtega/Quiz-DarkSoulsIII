@@ -1,9 +1,11 @@
 {
   "bg": "https://www.teahub.io/photos/full/358-3589490_dark-souls-3-firelink-shrine-art..jpg",
   "died":"https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg",
+  "SoulsLogo": "https://lh3.googleusercontent.com/proxy/gzo1COP0TAxyS8p_4UYFf_F7u6k95HAlXdaUJpqPDAKtwrDYwDRxDrDULf-eJx_w0uOjlPKk70P2ZYkckhnmphu8CwQFDoACu31drn64l3u_0u7X1sSz6GRT",
   "quiz": "https://static.wikia.nocookie.net/darksouls/images/1/19/Kiln_of_the_First_Flame_DS1.jpg/revision/latest?cb=20160627163130",
-  "title": "Quiz Dark Souls de Brenon Ortega",
-  "description": "Teste seus conhecimentos sobre dark souls enquanto tenta não morrer hehe.",
+  "favicon": "https://preview.redd.it/ujzh30k5tuoy.png?auto=webp&s=ac014cef40384971c24528d4c61e98f851b2571d",
+  "title": "Quiz Dark Souls - AluraQuiz",
+  "description": "Teste seus conhecimentos sobre dark souls enquanto tenta se manter vivo.",
   "questions": [
     {
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",

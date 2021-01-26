@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const Widget = styled.div`
+  opacity: 1;
   margin-top: 12px;
   margin-bottom : 12px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
@@ -24,8 +25,6 @@ const Widget = styled.div`
     font-weight: 400;
     line-height: 1;
   }
-
-
 `;
 
 Widget.Content = styled.div`
@@ -54,15 +53,22 @@ Widget.Header = styled.header`
 `;
 
 Widget.Input = styled.input`
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.borderRadius};
   font-size: 13px;
+  color: ${({theme}) => theme.colors.contrastText};
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 5px 7px;  
+  text-align: center;
+
   background-color: ${({ theme }) => theme.colors.mainBg};  
   * {
-    margin: 1;
+    margin: 2;
+  }::placeholder{
+    color: ${({ theme }) => theme.colors.contrastText};
+    opacity: 60%;
   }
 `;
 

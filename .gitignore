@@ -35,3 +35,6 @@ yarn-error.log*
 
 #VSCode settings
 .vscode/
+
+#eslint
+.eslintrc.js
