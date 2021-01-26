@@ -8,15 +8,11 @@ export function Meta(){
 
             <title key ="title" name = "og: title">{db.title}</title>
 
-            <meta key="description"
-                name = "description"
-                content = {db.description}
-            />
-
-            <meta key="og: image"
-                name = "og:image"
-                content = {db.bg}
-            />
+            
+            <meta property='og:title' content={db.title}/>
+            <meta property='og:image' content={db.bg}/>
+            <meta property='og:description' content={db.description}/>
+            <meta property='og:url' content='https://imersao-react-project.vercel.app/'/>
 
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
             <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&display=swap" rel="stylesheet"/>
