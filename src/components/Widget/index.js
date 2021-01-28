@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Widget = styled.div`
   opacity: 1;
@@ -7,10 +7,8 @@ const Widget = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.primary};
   border-radius: 4px;
   overflow: hidden;
-  background-color: ${({ theme }) =>{ 
-      return theme.colors.mainBg
-      }
-    };
+  background-color: ${({ theme }) => theme.colors.mainBg
+};
 
   h1, h2, h3 {
     font-size: 16px;
@@ -52,10 +50,28 @@ Widget.Header = styled.header`
   }
 `;
 
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.colors.secondary}40`};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+  
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
+`;
+
 Widget.Input = styled.input`
   border-radius: ${({ theme }) => theme.borderRadius};
   font-size: 13px;
-  color: ${({theme}) => theme.colors.contrastText};
+  color: ${({ theme }) => theme.colors.contrastText};
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -72,5 +88,4 @@ Widget.Input = styled.input`
   }
 `;
 
-
-export default Widget
+export default Widget;
