@@ -1,18 +1,17 @@
-/* eslint-disable max-len */
-/* eslint-disable react/prop-types */
-/* eslint-disable import/no-named-as-default */
 import React from 'react';
 import PropTypes from 'prop-types';
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import GitHubCorner from '../src/components/GitHubCorner';
-import QuizBackground from '../src/components/QuizBackground';
-import Meta from '../src/components/Meta';
-import Image from '../src/components/Image';
-import QuizContainer from '../src/components/QuizContainer';
-import Player from '../src/components/Player';
-import Button from '../src/components/Button';
-import AlternativesForm from '../src/components/AlternativesForm';
+import { motion } from 'framer-motion';
+import db from '../../db.json';
+import Widget from '../../src/components/Widget';
+import GitHubCorner from '../../src/components/GitHubCorner';
+import QuizBackground from '../../src/components/QuizBackground';
+import Meta from '../../src/components/Meta';
+import Image from '../../src/components/Image';
+import QuizContainer from '../../src/components/QuizContainer';
+import Player from '../../src/components/Player';
+import Button from '../../src/components/Button';
+import AlternativesForm from '../../src/components/AlternativesForm';
+import Song from '../../src/assets/audio/song.mp3';
 
 function ResultWidget({ results }) {
   return (
@@ -48,7 +47,8 @@ function ResultWidget({ results }) {
               {' '}
               Resultado:
               {' '}
-              {JSON.stringify(`results:${result}`)}
+              { // JSON.stringify(`results:${result}`)
+              }
               {result === true
                 ? 'Acertou!'
                 : 'Errou!'}
@@ -64,10 +64,12 @@ function LoadingWidget() {
   return (
     <Widget>
       <Widget.Header>
-        Carregando...
+        What is done, cannot be undone.
       </Widget.Header>
       <Widget.Content>
-        [DESAFIO DO LOADING]
+        <Image
+          src="https://i0.wp.com/nileease.com/wp-content/uploads/2020/05/8021744fc275101ed9a4b75ace41f168.gif?fit=231%2C219&ssl=1"
+        />
       </Widget.Content>
     </Widget>
   );
@@ -182,7 +184,7 @@ export default function QuizPage() {
   React.useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.PlayQuiz);
-    }, 1 * 1000);
+    }, 1 * 3000);
     //  nasce === didMount
   }, []);
 

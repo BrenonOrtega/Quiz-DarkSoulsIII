@@ -9,15 +9,18 @@
   },
   "dependencies": {
     "file-loader": "^6.2.0",
+    "framer-motion": "^3.2.2-rc.1",
     "next": "latest",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-is": "^16.8.0",
     "styled-components": "^5.0.0",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-throw-expressions": "^7.12.1",
     "babel-plugin-styled-components": "^1.8.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
