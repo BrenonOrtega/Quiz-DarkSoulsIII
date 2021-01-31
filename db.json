@@ -1,7 +1,7 @@
 {
   "bg": "https://i.pinimg.com/originals/94/2d/dc/942ddce639884288d69ce9df0a8db31c.jpg",
   "died":"https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg",
-  "SoulsLogo": "https://www.logolynx.com/images/logolynx/e7/e71ad81bdb6f16672d12c8d73a68809e.png",
+  "SoulsLogo": "https://media.gamestop.com/i/gamestop/dark-souls-3-logo/dark-souls-3.png",
   "favicon": "https://preview.redd.it/ujzh30k5tuoy.png?auto=webp&s=ac014cef40384971c24528d4c61e98f851b2571d",
   "title": "Quiz Dark Souls - AluraQuiz",
   "description": "Teste seus conhecimentos sobre dark souls enquanto tenta se manter vivo.",
@@ -27,6 +27,40 @@
          "Small Doll",
          "Rubbish",
          "Blood of the Dark Soul"
+      ]
+    },
+    {
+      "image": "https://th.bing.com/th/id/Rec61dffd8161bf798ccdff434c10fbe5?rik=7ljUevKafjEevg&riu=http%3a%2f%2fwww.godisageek.com%2fwp-content%2fuploads%2fFirelink-Shrine.jpg&ehk=kiphvEigVT8Wykcy3CCjFMTkqPsw2L%2fvhp3Mbb5z%2fRk%3d&risl=&pid=ImgRaw",
+      "title": "Qual destes não é um Lord of Cinder?",
+      "description": "Sempre há um intruso",
+      "answer": 1,
+      "alternatives": [
+         "Ludleth of Courland",
+         "Soul of Cinder",
+         "Farron's Undead Legion, The Abyss Watchers",
+         "Yhorm, The Giant"
+      ]
+    },
+    {
+      "image": "https://i.ytimg.com/vi/KRBSkoaNlh8/maxresdefault.jpg",
+      "title": "Qual o nome do filho de Oceiros, o rei consumido pelo qual ele chama durante sua batalha?",
+      "description": "C'mon, don't be afraid.",
+      "answer": 2,
+      "alternatives": [
+         "Shanalotte",
+         "Lothric",
+         "Ocelotte",
+         "Yorshka"
+      ]
+    },
+    {
+      "image": "https://staticdelivery.nexusmods.com/images/110/52353336-1530785428.png",
+      "title": "Ao matar a Firekeeper de firelink Shrine, você fica impossibilitado de aumentar seu nível no jogo.",
+      "description": "Se você souber essa... ficarei decepcionado :( ou não né. xD ",
+      "answer": 1,
+      "alternatives": [
+         "Verdadeiro",
+         "Falso"
       ]
     }
   ],

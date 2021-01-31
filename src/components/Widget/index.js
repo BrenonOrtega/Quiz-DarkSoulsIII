@@ -15,6 +15,7 @@ const Widget = styled.div`
     font-weight: 700;
     line-height: 1;
     margin-bottom: 0;
+    text-align center;
     
   }
 
@@ -44,6 +45,7 @@ Widget.Header = styled.header`
   justify-content: flex-start;
   align-items: center;
   padding: 15px 26px;
+  text-align: center;
   background-color: ${({ theme }) => theme.colors.primary};
   * {
     margin: 0;

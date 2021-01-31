@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import db from '../../db.json';
@@ -14,17 +15,22 @@ import AlternativesForm from '../../src/components/AlternativesForm';
 import Song from '../../src/assets/audio/song.mp3';
 
 function ResultWidget({ results }) {
+  /*  Comando que itera cada um dos index do array e retorna  o comprimento do array (.length)
+  com cada tupla que atende a condição abaixo. "iterando cada index x e para cada x == true, retorna x(true)" */
+  const total = results.filter((x) => x === true).length;
+  const bad = db.died;
+  const nice = 'https://meme.ucoz.net/_nw/10/05207579.png';
+  const ashenOne = 'https://i.pinimg.com/736x/9b/b3/9e/9bb39e8de2f2de3f4edbcebbfd445905.jpg';
   return (
     <Widget>
       <Widget.Header>
-        Seus resultados:
+        RESULTADO:
       </Widget.Header>
       <Widget.Content>
         <p>
           Você Acertou
           {' '}
-
-          {/* A função abaixo faz a mesma coisa que o comando na sequência.
+          {/* A função abaixo faz a mesma coisa que o results.filter no ínicio da function.
            {resultados.reduce((somatoriaAcertos, resultAtual) => {
             const isAcerto = resultAtual === true;
             if (isAcerto) {
@@ -32,12 +38,13 @@ function ResultWidget({ results }) {
             }
             return somatoriaAcertos;
           }, 0)} */}
-          {/* Comando que itera cada um dos index do array e retorna (.length) o comprimento do array
-           com cada tupla que atende a condição abaixo. "itera x, para cada x == true, retorna x(true)" */}
-
-          {results.filter((x) => x === true).length }
+          { total }
           {' '}
           perguntas.
+
+          {total < 3 && <Image src={bad} /> }
+          {total > 3 && <Image src={nice} />}
+          {total === 3 && <Image src={ashenOne} />}
         </p>
         <ul>
           {results.map((result, index) => (
@@ -91,15 +98,15 @@ const QuestionWidget = ({
   return (
     <Widget>
       <Widget.Header>
-        <h3>
+        <h1>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
-        </h3>
+        </h1>
       </Widget.Header>
 
       <Widget.Content>
         <Image src={question.image} />
 
-        <h2>{question.title}</h2>
+        <h1>{question.title}</h1>
 
         <p>{question.description}</p>
 
@@ -160,6 +167,20 @@ QuestionWidget.propTypes = {
   totalQuestions: PropTypes.number.isRequired,
 };
 
+function BGM() {
+  const audioTrack = useRef();
+
+  function handlePlay() {
+    audioTrack.current.volume = 0.3;
+    audioTrack.current.play();
+  }
+
+  React.useEffect(() => handlePlay(), []);
+  return (
+    <audio ref={audioTrack} src={Song} />
+  );
+}
+
 const screenStates = {
   Loading: 'Loading',
   PlayQuiz: 'PlayQuiz',
@@ -215,8 +236,8 @@ export default function QuizPage() {
         {screenState === screenStates.Loading && <LoadingWidget />}
 
         {screenState === screenStates.Result && <ResultWidget results={results} />}
-        <Player />
       </QuizContainer>
+      <BGM />
       <GitHubCorner projectUrl="https://github.com/BrenonOrtega/" />
 
     </QuizBackground>

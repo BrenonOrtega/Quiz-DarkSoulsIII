@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     /* New styles */
     display: flex;
     flex-direction: column;
-    font-family: 'Lato', serif;
+    font-family: 'Garamond', serif;
 
     // Deixa branco no começo
     color: ${({ theme }) => theme.colors.contrastText};

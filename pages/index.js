@@ -109,9 +109,7 @@ export default function Home( selectedDb ) {
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/BrenonOrtega/" />
       <QuizContainer>
-        <Player />
       </QuizContainer>
     </QuizBackground>
-
   );
 }
