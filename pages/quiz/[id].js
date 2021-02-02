@@ -1,18 +1,17 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import QuizPage from '.';
 
-export default function QuizDaGaleraPage(props) {
-
-
+export default function QuizDaGaleraPage({ dbExterno }) {
   return (
-    <div style={{ color: 'black' }}>
-      Quiz externo galera da imersão.
-      {JSON.stringify(props, null, 4)}
-    </div>
+    <ThemeProvider theme={dbExterno.theme}>
+      <QuizPage externalQuestions={dbExterno} />
+    </ThemeProvider>
   );
 }
 
 export async function getServerSideProps(context) {
-  const dbExterno = await fetch('https://aluraquiz-css.omariosouto.vercel.app/api/db')
+  const dbExterno = await fetch('https://quiz-cavaleiro-zodiaco.vercel.app/api/db')
     .then((respostaServidor) => {
       if (respostaServidor.ok) {
         return respostaServidor.json();

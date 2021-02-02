@@ -1,22 +1,20 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import Meta from '../src/components/Meta';
+import Image from '../src/components/Image';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
-import QuizBackground from '../src/components/QuizBackground';
-import Image from '../src/components/Image';
-import Button from '../src/components/Button';
-import Input from '../src/components/Input';
-import Meta from '../src/components/Meta';
 import QuizContainer from '../src/components/QuizContainer';
+import QuizBackground from '../src/components/QuizBackground';
 import db from '../db.json';
-import Player from '../src/components/Player';
 
-export default function Home( selectedDb ) {
+export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
-
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Meta />
@@ -79,11 +77,10 @@ export default function Home( selectedDb ) {
           initial="hidden"
           animate="show"
         >
+          <Widget.Header>
+            Quiz da Galera
+          </Widget.Header>
           <Widget.Content>
-            <h1>Quiz da Galera</h1>
-          </Widget.Content>
-          <Widget.Content>
-
             {db.external.map((linkExterno) => {
               const [projectName, gitHubUser] = (linkExterno
                 .replace(/\//g, '')
@@ -102,14 +99,12 @@ export default function Home( selectedDb ) {
                 </Widget.Topic>
               );
             })}
-
           </Widget.Content>
         </Widget>
         <Footer />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/BrenonOrtega/" />
-      <QuizContainer>
-      </QuizContainer>
+      <QuizContainer />
     </QuizBackground>
   );
 }

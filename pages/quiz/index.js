@@ -1,22 +1,21 @@
+/* eslint-disable react/prop-types */
 import React, { useRef, useState } from 'react';
-import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import db from '../../db.json';
-import Widget from '../../src/components/Widget';
-import GitHubCorner from '../../src/components/GitHubCorner';
-import QuizBackground from '../../src/components/QuizBackground';
 import Meta from '../../src/components/Meta';
 import Image from '../../src/components/Image';
-import QuizContainer from '../../src/components/QuizContainer';
-import Player from '../../src/components/Player';
+import Widget from '../../src/components/Widget';
 import Button from '../../src/components/Button';
-import AlternativesForm from '../../src/components/AlternativesForm';
 import Song from '../../src/assets/audio/song.mp3';
+import GitHubCorner from '../../src/components/GitHubCorner';
+import QuizContainer from '../../src/components/QuizContainer';
+import QuizBackground from '../../src/components/QuizBackground';
+import AlternativesForm from '../../src/components/AlternativesForm';
 
 function ResultWidget({ results }) {
-  /*  Comando que itera cada um dos index do array e retorna  o comprimento do array (.length)
-  com cada tupla que atende a condição abaixo. "iterando cada index x e para cada x == true, retorna x(true)" */
+  /* itera cada um dos index do array e retorna  o comprimento do array (.length) com cada tupla
+  que atende a condição abaixo. "iterando cada index x e para cada x == true, retorna x(true)" */
   const total = results.filter((x) => x === true).length;
   const bad = db.died;
   const nice = 'https://meme.ucoz.net/_nw/10/05207579.png';
@@ -105,7 +104,6 @@ const QuestionWidget = ({
 
       <Widget.Content>
         <Image src={question.image} />
-
         <h1>{question.title}</h1>
 
         <p>{question.description}</p>
@@ -187,13 +185,14 @@ const screenStates = {
   Result: 'Result',
 };
 
-export default function QuizPage() {
+export default function QuizPage({externalQuestions}) {
+  const dados = externalQuestions === undefined ? db : externalQuestions;
   const [screenState, setScreenState] = React.useState(screenStates.Loading);
   const [results, setResults] = React.useState([]);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
-  const totalQuestions = db.questions.length;
+  const totalQuestions = dados.questions.length;
   const questionIndex = currentQuestion;
-  const question = db.questions[questionIndex];
+  const question = dados.questions[questionIndex];
 
   function addResult(result) {
     setResults([
@@ -218,7 +217,7 @@ export default function QuizPage() {
     }
   }
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={dados.bg}>
       <QuizContainer>
         <Meta />
         <Image src={db.SoulsLogo} />
