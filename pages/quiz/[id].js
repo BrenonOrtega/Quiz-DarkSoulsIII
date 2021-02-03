@@ -4,12 +4,10 @@ import QuizPage from '.';
 
 export default function QuizDaGaleraPage({dbExterno}) {
   return (
-    <div>
       <ThemeProvider theme={dbExterno.theme}>
         <QuizPage dbExterno={dbExterno} />
       {/* <p>{JSON.stringify(dbExterno)}</p> */}
       </ThemeProvider>
-    </div>
   );
 }
 

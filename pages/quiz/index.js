@@ -70,7 +70,7 @@ function LoadingWidget() {
   return (
     <Widget>
       <Widget.Header>
-        What is done, cannot be undone.
+        <h1>What is done, cannot be undone.</h1>
       </Widget.Header>
       <Widget.Content>
         <Image
