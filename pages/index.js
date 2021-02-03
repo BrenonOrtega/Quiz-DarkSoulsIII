@@ -27,6 +27,8 @@ export default function Home() {
             hidden: { opacity: 0, y: '100%' },
           }}
           src={db.SoulsLogo}
+          largura="220px"
+          altura="90px"
         />
         <Widget
           as={motion.section}

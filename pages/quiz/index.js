@@ -17,9 +17,9 @@ function ResultWidget({ results }) {
   /* itera cada um dos index do array e retorna  o comprimento do array (.length) com cada tupla
   que atende a condição abaixo. "iterando cada index x e para cada x == true, retorna x(true)" */
   const total = results.filter((x) => x === true).length;
-  const bad = db.died;
-  const nice = 'https://meme.ucoz.net/_nw/10/05207579.png';
-  const ashenOne = 'https://i.pinimg.com/736x/9b/b3/9e/9bb39e8de2f2de3f4edbcebbfd445905.jpg';
+  const bad = 'https://media.giphy.com/media/60rGqeykp8O597gBNO/giphy.gif';
+  const nice = 'https://steamuserimages-a.akamaihd.net/ugc/608351653791599621/B9223EDC00598B2395F3C80A4DB7C315D056FEAC/';
+  const ashenOne = 'https://media.giphy.com/media/LLvqxmK3gOXLy/giphy.gif';
   return (
     <Widget>
       <Widget.Header>
@@ -218,10 +218,13 @@ export default function QuizPage({externalQuestions}) {
   }
   return (
     <QuizBackground backgroundImage={dados.bg}>
+      <Meta />
+      <Image.Logo
+        src={db.SoulsLogo}
+        largura="220px"
+        altura="90px"
+      />
       <QuizContainer>
-        <Meta />
-        <Image src={db.SoulsLogo} />
-
         {screenState === screenStates.PlayQuiz && (
           <QuestionWidget
             question={question}
