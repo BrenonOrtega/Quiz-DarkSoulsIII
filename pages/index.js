@@ -91,14 +91,16 @@ export default function Home() {
                 .replace('.', ' ')
                 .split(' '));
               return (
-                <Widget.Topic
-                  href={linkExterno}
-                >
-                  {projectName}
-                  {' do '}
-                  {gitHubUser}
+                <li key={linkExterno}>
+                  <Widget.Topic
+                    href={`/quiz/${projectName}__${gitHubUser}`}>
 
-                </Widget.Topic>
+                    {projectName}
+                    {' do '}
+                    {gitHubUser}
+
+                  </Widget.Topic>
+                </li>
               );
             })}
           </Widget.Content>

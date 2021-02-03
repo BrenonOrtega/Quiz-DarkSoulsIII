@@ -185,8 +185,8 @@ const screenStates = {
   Result: 'Result',
 };
 
-export default function QuizPage({externalQuestions}) {
-  const dados = externalQuestions === undefined ? db : externalQuestions;
+export default function QuizPage({ dbExterno }) {
+  const dados = (dbExterno === undefined ? db : dbExterno);
   const [screenState, setScreenState] = React.useState(screenStates.Loading);
   const [results, setResults] = React.useState([]);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
@@ -219,12 +219,12 @@ export default function QuizPage({externalQuestions}) {
   return (
     <QuizBackground backgroundImage={dados.bg}>
       <Meta />
-      <Image.Logo
-        src={db.SoulsLogo}
-        largura="220px"
-        altura="90px"
-      />
       <QuizContainer>
+        <Image
+          src={db.SoulsLogo}
+          largura="220px"
+          altura="90px"
+        />
         {screenState === screenStates.PlayQuiz && (
           <QuestionWidget
             question={question}
