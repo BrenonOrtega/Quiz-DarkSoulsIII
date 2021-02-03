@@ -39,7 +39,7 @@ npm run dev
 
 ## check_mark: Features Desenvolvidas
 
--   [ ] importação de outroz quizes.
+-   [ ] importação de quizes externos.
 -   [ ] Melhorias de estilização.
 -   [ ] Temporizador para cada pergunta
 -   [ ] Sistema de Pontuação
